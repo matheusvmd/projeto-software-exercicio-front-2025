@@ -13,8 +13,7 @@ function decodeJwt(token) {
 }
 
 
-const IP = "18.230.122.17"; // mesmo IP do backend
-const BASE_URL = `http://${IP}:8080`;
+const BASE_URL = "/api";  
 
 export default function ViagensApp() {
   const [viagens, setViagens] = useState([]);
