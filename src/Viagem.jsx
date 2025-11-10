@@ -35,7 +35,7 @@ export default function ViagensApp() {
         const accessToken = await getAccessTokenSilently();
         setToken(accessToken);
         const decoded = decodeJwt(accessToken);
-        const roles = decoded.roles || decoded["https://example.com/roles"] || [];
+        const roles = decoded.roles || decoded["https://myapp.example/roles"] || [];
         setIsAdmin(roles.includes("ADMIN"));
       } catch (e) {
         console.error("Erro ao buscar token:", e);
